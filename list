@@ -1,0 +1,8 @@
+import os
+
+fruits = ["apple", "banana", "mango", "grape", "orange"]
+count = 1
+for fruit in fruits:
+    print(count, "I like", fruit)
+    count += 1
+print("Done!")
