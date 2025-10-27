@@ -1,0 +1,23 @@
+
+import sys
+import pygame
+
+width= 400
+height = 300
+
+pygame.init()
+screen = pygame.display.set_mode((width, height))
+pygame.display.set_caption("Here's an Image!")
+
+image = pygame.image.load('C:\\Users\\rdsec\\Downloads\\sadwojak.jpeg')
+
+screen.blit(image, (84, 40))
+pygame.display.flip()
+running = True
+while running:
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+pygame.quit()
+sys.exit()
