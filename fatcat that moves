@@ -1,0 +1,45 @@
+import pygame
+import sys
+
+pygame.init()
+
+width = 400
+height = 300
+screen = pygame.display.set_mode((width, height))
+pygame.display.set_caption("Fat Cat!")
+
+white = (255, 255, 255)
+img = pygame.image.load('C:\\Users\\rdsec\\Downloads\\fatcat2.jpeg')
+
+direction = "right"
+boy_x = 100
+boy_y = 100
+
+clock = pygame.time.Clock()  
+
+running = True
+while running:
+    screen.fill(white)
+
+  
+    if direction == "right":
+        boy_x += 1
+    elif direction == "left":
+        boy_x -= 1
+    elif direction == "up":
+        boy_y -= 1
+    elif direction == "down":
+        boy_y += 1
+
+    screen.blit(img, (boy_x, boy_y))
+    pygame.display.flip()
+    clock.tick(60)
+
+   
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            running = False
+
+
+pygame.quit()
+sys.exit()
